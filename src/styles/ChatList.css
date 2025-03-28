@@ -1,0 +1,391 @@
+/* Variables de color corporativas Equirent */
+:root {
+  --primary-blue: #0E5D9D;    /* Azul principal */
+  --secondary-blue: #2EA8E0;  /* Azul secundario */
+  --gray-light: #f8f9fa;
+  --gray-medium: #CAC4C4;
+  --gray-dark: #666;
+  --white: #FFFFFF;
+  --border-color: #E5E5E5;
+}
+
+/* Reset básico */
+button {
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Contenedor principal */
+.chat-list {
+  width: 25%;
+  max-width: 30%;
+  background-color: var(--white);
+  border-right: 1px solid var(--border-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header mejorado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  margin: 0;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--white);
+}
+
+/* Barra de búsqueda mejorada */
+.search-bar {
+  padding: 0.75rem;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.input-search-bar {
+  position: relative;
+}
+
+.input-search-bar input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  font-size: 0.875rem;
+  background-color: var(--gray-light);
+  transition: all 0.3s ease;
+}
+
+.input-search-bar input:focus {
+  outline: none;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(14, 93, 157, 0.1);
+}
+
+.input-search-bar i {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray-dark);
+  font-size: 0.875rem;
+}
+
+/* Contenedor de filtros mejorado */
+.container-filter-btns {
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 0;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.filter-button {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  background-color: var(--white);
+  color: var(--gray-dark);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  border: 1px solid var(--border-color);
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.filter-button:hover {
+  background-color: var(--gray-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filter-button.active {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  border-color: var(--primary-blue);
+}
+
+/* Lista de chats mejorada */
+.scrollable {
+  overflow-y: auto;
+  flex: 1;
+  padding: 0.75rem;
+  background-color: var(--white);
+}
+
+.chat-item {
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chat-item:hover {
+  background-color: var(--gray-light);
+  transform: translateX(2px);
+}
+
+.chat-details {
+  flex: 1;
+}
+
+.chat-details h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--gray-dark);
+}
+
+.chat-details p {
+  margin: 0.25rem 0 0;
+  font-size: 0.813rem;
+  color: var(--gray-dark);
+}
+
+.chat-details span {
+  font-size: 0.75rem;
+  color: var(--gray-dark);
+}
+
+/* Indicador de estado mejorado */
+.color-green {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--primary-blue);
+  border-radius: 50%;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  box-shadow: 0 2px 4px rgba(14, 93, 157, 0.2);
+}
+
+/* Contenedor de botones de opciones mejorado */
+.opt-btns-container {
+  width: 25%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.opt-btns {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.opt-btns:hover {
+  background-color: var(--gray-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.opt-btns:disabled {
+  background-color: var(--gray-light);
+  color: var(--gray-medium);
+  border-color: var(--border-color);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.opt-btns svg {
+  font-size: 1.25rem;
+  padding: 4px;
+}
+
+/* Perfil mejorado */
+.profile {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Botón de cierre mejorado */
+.close {
+  font-size: 0.813rem;
+  color: var(--primary-blue);
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: var(--secondary-blue);
+}
+
+/* Contenedor de asignación mejorado */
+.asign-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.asign-btn {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  width: 100%;
+  font-size: 0.875rem;
+  margin: 5px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+  color: var(--gray-dark);
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.asign-btn:hover {
+  background-color: var(--gray-light);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.asign-btn-icon {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  color: var(--primary-blue);
+}
+
+/* Media Queries mejorados */
+@media (max-width: 480px) {
+  .header {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .container-filter-btns {
+    padding: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .input-search-bar input {
+    font-size: 0.75rem;
+    padding: 0.625rem 2rem 0.625rem 0.75rem;
+  }
+
+  .filter-button {
+    padding: 0.375rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .opt-btns {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .opt-btns svg {
+    font-size: 1rem;
+    height: 1em;
+    width: 1em;
+  }
+
+  .chat-details h4 {
+    font-size: 0.75rem;
+  }
+
+  .chat-details p,
+  .chat-details span {
+    font-size: 0.688rem;
+  }
+
+  .close {
+    font-size: 0.688rem;
+  }
+
+  .color-green {
+    font-size: 0.688rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container-filter-btns {
+    font-size: 0.813rem;
+  }
+
+  .filter-button {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+@media (min-width: 1975px) {
+  .input-search-bar input {
+    height: 3.5rem;
+    font-size: 1.25rem;
+    padding: 1rem 3rem 1rem 1.5rem;
+  }
+
+  .color-green {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+
+  .chat-details h4 {
+    font-size: 1.25rem;
+  }
+
+  .chat-details p {
+    font-size: 1rem;
+  }
+
+  .chat-details span {
+    font-size: 0.875rem;
+  }
+
+  .filter-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .opt-btns {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .opt-btns svg {
+    font-size: 1.5rem;
+  }
+
+  .profile {
+    width: 3.5em;
+    height: 3.5em;
+  }
+
+  .close {
+    font-size: 1rem;
+  }
+  
+  .asign-btn {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}

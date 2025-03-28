@@ -1,0 +1,124 @@
+/* Variables declaration */
+:root {
+  --primary-blue: #0E5D9D;    /* Azul principal Equirent */
+  --secondary-blue: #2EA8E0;  /* Azul secundario */
+  --white: #FFFFFF;
+  --gray-light: #f8f9fa;
+  --gray-medium: #E5E5E5;
+  --gray-dark: #666;
+  --border-color: #E5E5E5;
+  --table-odd: #EBF5FB;
+  --table-even: #F8F9FA;
+}
+
+.hierarchy-container {
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(14, 93, 157, 0.1);
+}
+
+/* Table Styles */
+.hierarchy-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+}
+
+/* Header Styles */
+.table-header {
+  background-color: var(--primary-blue);
+  color: var(--white);
+}
+
+.header-cell {
+  padding: 1rem;
+  font-weight: 500;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+/* Row Styles */
+.table-row {
+  transition: all 0.3s ease;
+}
+
+.table-row:nth-child(odd) {
+  background-color: var(--table-odd);
+}
+
+.table-row:nth-child(even) {
+  background-color: var(--table-even);
+}
+
+.table-row:hover {
+  background-color: rgba(14, 93, 157, 0.05);
+}
+
+/* Cell Styles */
+.table-cell {
+  padding: 0.875rem 1rem;
+  font-size: 0.875rem;
+  color: var(--gray-dark);
+}
+
+/* Tree Cell Styles */
+.tree-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tree-icon {
+  color: var(--primary-blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tree-icon:hover {
+  color: var(--secondary-blue);
+}
+
+/* Animation Styles */
+.table-animation-container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hierarchy-container {
+    padding: 1rem;
+  }
+
+  .header-cell,
+  .table-cell {
+    padding: 0.75rem;
+    font-size: 0.813rem;
+  }
+}
+
+@media (min-width: 1975px) {
+  .hierarchy-container {
+    padding: 2rem;
+  }
+
+  .header-cell {
+    padding: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .table-cell {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+  }
+}

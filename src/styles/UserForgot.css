@@ -1,0 +1,43 @@
+.message-user{
+    color:#075e54;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 5%;
+    font-size: 80%;
+}
+
+  .user-validate{
+    color:#075e54;
+    font-size: 150%;
+ }
+
+ .user{
+    width: 20%;
+    margin: 5%;
+ }
+
+ .container-forgot{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .user-form{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  width: 50%;
+  flex-direction: column;
+ }
+ 
+
+
+ @media (max-width : 480px){
+   form{
+      margin-top: -10%;
+      margin-bottom: 10%;
+   }
+ }
+  
+ 

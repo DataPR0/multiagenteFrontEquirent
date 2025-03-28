@@ -1,0 +1,143 @@
+/* global.css */
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables globales */
+:root {
+  --primary-blue: #0E5D9D;    /* Azul principal Equirent */
+  --secondary-blue: #2EA8E0;  /* Azul secundario */
+  --white: #FFFFFF;
+  --gray-light: #f8f9fa;
+  --gray-medium: #E5E5E5;
+  --gray-dark: #666;
+  --border-color: #E5E5E5;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Configuración general */
+body {
+  font-family: var(--font-family);
+  background-color: var(--gray-light);
+  color: var(--gray-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+  
+/* Animaciones */
+.slideInDown {
+  animation: slideInDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideOutUp {
+  animation: slideOutUp 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* Estilos de sombra */
+.box-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow-lg {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-light);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-medium);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-dark);
+}
+
+/* Utilidades */
+.text-primary {
+  color: var(--primary-blue);
+}
+
+.text-secondary {
+  color: var(--secondary-blue);
+}
+
+.bg-primary {
+  background-color: var(--primary-blue);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-blue);
+}
+
+.rounded {
+  border-radius: 8px;
+}
+
+.rounded-lg {
+  border-radius: 12px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Transiciones */
+.transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1975px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+

@@ -1,0 +1,123 @@
+/* Variables declaration */
+:root {
+  --primary-blue: #0E5D9D;    /* Azul principal Equirent */
+  --secondary-blue: #2EA8E0;  /* Azul secundario */
+  --white: #FFFFFF;
+  --gray-light: #f8f9fa;
+  --gray-medium: #E5E5E5;
+  --gray-dark: #666;
+  --border-color: #E5E5E5;
+}
+
+.container-admin {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--gray-light);
+}
+
+/* Header Styles */
+.admin-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.admin-btns-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 5rem;
+  max-height: 2vh;
+}
+
+.header-btns {
+  background: var(--primary-blue);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 0.700rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(14, 93, 157, 0.1);
+  margin-top: -33px;
+}
+
+.header-btns:hover {
+  background: var(--secondary-blue);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px rgba(14, 93, 157, 0.1);
+}
+
+
+/* Body Styles */
+.admin-body {
+  flex: 1;
+  max-height: 80vh;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.admin-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-height: 80vh;
+}
+
+/* Logo Container */
+.container-img-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+.img-header {
+  height: 200px;
+  width: auto;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  .admin-btns-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .header-btns {
+    font-size: 0.813rem;
+    padding: 0.625rem 1rem;
+  }
+
+  .img-header {
+    height: 200px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .header-btns {
+    font-size: 0.875rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .img-header {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1975px) {
+  .admin-btns-header {
+    padding: 1.5rem 2.5rem;
+  }
+
+  .header-btns {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .img-header {
+    height: 250px;
+  }
+}

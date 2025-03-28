@@ -1,0 +1,40 @@
+.searchInCover{
+    padding: 2px 5px;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.tittle-user-asig{
+    color: rgb(117, 120, 120);
+}
+
+@media (max-width : 480px){
+    .searchInCover{
+        margin-bottom: 5%;
+        width: 45px;
+    }
+
+    .tittle-user-asig{
+        color: rgb(117, 120, 120);
+        font-size: 60%;
+    }
+
+    h4{
+        font-size: 90%;
+    }
+}
+
+@media (min-width : 1975px) {
+    .searchInCover{
+        margin-bottom: 5%;
+        width: 160px;
+        height: 25px;
+    }
+    
+    .tittle-user-asig{
+        color: rgb(117, 120, 120);
+    }
+}
+

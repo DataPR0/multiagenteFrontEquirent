@@ -1,0 +1,38 @@
+.collection-container{
+    transform-origin: center;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    background-color: rgb(245, 242, 242);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2; 
+    height: 60%;
+    width: 60%;
+    overflow: hidden;
+}
+
+.main-content { 
+    margin-top: 5%;
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 80%;
+
+}
+
+@media (min-width : 1975px) {
+    
+    .main-content { 
+        font-size: 25px;
+    
+    }
+
+    h1{
+        font-size: 45px;
+    }
+}
+
+
+
+

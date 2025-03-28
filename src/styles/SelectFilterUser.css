@@ -1,0 +1,14 @@
+
+@media (max-width : 480px){
+  .filters{
+      font-size: 14px;
+  }
+
+  .select-user{
+    font-size: 10px;
+  }
+
+  .filters option {
+    font-size: 12px;
+  }
+}  

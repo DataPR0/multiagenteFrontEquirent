@@ -1,0 +1,15 @@
+.app-container {
+  display: flex;
+  height: 100vh;
+  background-color: #e5ddd5;
+  overflow: hidden;
+}
+
+
+
+.chat-window-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}

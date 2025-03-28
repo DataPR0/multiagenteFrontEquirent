@@ -1,0 +1,14 @@
+.home-page{
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%; 
+}
+
+.chat{
+    width: 70%;
+}

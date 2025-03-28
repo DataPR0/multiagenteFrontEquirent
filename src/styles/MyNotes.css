@@ -1,0 +1,142 @@
+.note-list{
+    max-height: 70%;
+    overflow-y: auto;
+    width: 100%;
+    height: 70%;
+    scroll-behavior: smooth;
+}
+
+.notes{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.notes-text-area{
+    width: 80%;
+}
+
+.large-texTarea{
+    width: 100%; 
+    height: 80px;
+}
+
+.form-my-notes{
+    display: flex;
+}
+
+.note-item{
+    border:  1px solid #ccc;
+    padding: 2%;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.note-item:hover{
+    background-color: rgb(197, 190, 190);
+}
+
+.btn-save-note{
+    padding: 5px 10px;
+    border: none;
+    background-color: #25d366;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 80%;
+}
+
+.btn-save-note:hover {
+    background-color: #1db955;
+    transition: .2s ease;
+  }
+
+ .note-item-container {
+    display: flex;
+    margin: 3%;
+ } 
+
+ .delete-note-icon {
+    color: red;
+    font-size: x-large;
+ }
+
+ .btns-opt-notes {
+    align-items: center; 
+    cursor: pointer;
+    padding: 1%;
+ }
+
+ .edit-note-icon{
+    color: rgb(0, 0, 0);
+    font-size: x-large;
+ }
+
+ .editing-note{
+    border:  1px solid #ccc;
+    padding: 2%;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    cursor: pointer;
+    flex-grow: 1;
+ }
+
+ .save-note-icon {
+    font-size: x-large;
+ }
+ 
+ .cancel-note-icon {
+    color: red;
+    font-size: x-large;
+ }
+
+ @media (min-width: 481px) and (max-width: 768px){
+    .large-texTarea{
+        width: 100%; 
+        height: 70px;
+    }
+
+    .notes{
+        width: 100%;
+        height: 125%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    
+    }
+
+ }
+
+ @media (min-width : 1975px){
+    .notes-text-area{
+        width: 90%;
+        font-size: 30px;
+    }
+
+    .large-texTarea {
+        font-size: 25px;
+    }
+
+    .note-item {
+        font-size: 25px;
+    }
+    
+    .delete-note-icon {
+        color: red;
+        font-size: 35px;
+     }
+    
+    
+     .edit-note-icon{
+        color: rgb(0, 0, 0);
+        font-size: 35px;
+     }
+    
+ }
+
+

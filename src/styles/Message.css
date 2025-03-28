@@ -1,0 +1,21 @@
+.message {
+    display: flex;
+    margin: 10px;
+  }
+  
+  .message.own {
+    justify-content: flex-end;
+  }
+  
+  .message-text {
+    max-width: 60%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e1ffc7;
+    color: #333;
+  }
+  
+  .message.own .message-text {
+    background-color: #dcf8c6;
+  }
+  

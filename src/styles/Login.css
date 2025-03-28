@@ -1,0 +1,259 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary-blue: #0E5D9D;    
+  --secondary-blue: #2EA8E0;  
+  --white: #FFFFFF;
+  --black: #000000;
+  --gray-light: #f8f9fa;
+  --gray-border: #E5E5E5;
+  --gradient-blue: linear-gradient(135deg, #0E5D9D 0%, #2EA8E0 100%);
+}
+
+.login {
+  background-color: var(--gray-light);
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+}
+
+.login-Container {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(14, 93, 157, 0.08);
+  width: 75%;
+  height: 480px;
+  max-width: 850px;
+  overflow: hidden;
+}
+
+/* Sección izquierda con logos */
+.logos-section {
+  width: 40%;
+  background: var(--gradient-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.logos-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/car.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  z-index: 1;
+}
+
+.logos-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.company-logo {
+  width: auto;
+  object-fit: contain;
+  transition: all 0.25s ease;
+}
+
+.company-logo[alt="Equirent"] {
+  height: 140px;
+  filter: brightness(0) invert(1);
+  margin-bottom: 0.5rem;
+}
+
+.company-logo[alt="DataPro"] {
+  height: 43px;
+  filter: brightness(0) invert(1);
+}
+
+.company-logo:hover {
+  transform: scale(1.02);
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+}
+
+/* Sección derecha con formulario */
+.form-section {
+  width: 60%;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--white);
+}
+
+.tittle-login {
+  color: var(--primary-blue);
+  font-family: 'Geomanist', 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-bottom: 1.75rem;
+  text-align: left;
+  position: relative;
+}
+
+.tittle-login::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 30px;
+  height: 2px;
+  background: var(--gradient-blue);
+  border-radius: 1px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.8rem 1rem 0.8rem 2.5rem;
+  border: 1px solid var(--gray-border);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: var(--black);
+  transition: all 0.25s ease;
+  background: var(--gray-light);
+}
+
+.form-group input:focus {
+  border-color: var(--primary-blue);
+  background: var(--white);
+  box-shadow: 0 0 0 2px rgba(14, 93, 157, 0.06);
+}
+
+.form-group i {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-blue);
+  font-size: 0.9rem;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--gradient-blue);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 3px 8px rgba(14, 93, 157, 0.12);
+}
+
+.login-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(14, 93, 157, 0.15);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.forgot-password {
+  margin-top: 1.25rem;
+  text-align: center;
+}
+
+.forgot-password a {
+  color: var(--primary-blue);
+  font-size: 0.75rem;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  transition: all 0.25s ease;
+  font-weight: 400;
+}
+
+.forgot-password a:hover {
+  color: var(--secondary-blue);
+}
+
+/* Media Queries */
+@media (max-width: 968px) {
+  .login-Container {
+    width: 85%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .logos-section {
+    width: 100%;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .form-section {
+    width: 100%;
+    padding: 1.75rem;
+  }
+
+  .logos-container {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .company-logo[alt="Equirent"] {
+    height: 140px;
+  }
+  
+  .company-logo[alt="DataPro"] {
+    height: 43px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-Container {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .form-section {
+    padding: 1.25rem;
+  }
+
+  .tittle-login {
+    font-size: 1.2rem;
+  }
+
+  .company-logo[alt="Equirent"] {
+    height: 80px;
+  }
+  
+  .company-logo[alt="DataPro"] {
+    height: 32px;
+  }
+}

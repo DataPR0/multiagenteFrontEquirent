@@ -1,0 +1,43 @@
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .chat-item:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .chat-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin-right: 10px;
+  }
+  
+  .chat-details {
+    flex: 1;
+  }
+  
+  .chat-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  
+  .chat-name {
+    font-weight: bold;
+  }
+  
+  .chat-time {
+    color: #888;
+  }
+  
+  .chat-message {
+    color: #555;
+    font-size: 12px;
+  }
+  

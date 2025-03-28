@@ -1,0 +1,64 @@
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.profileIcon {
+    background-color: #e5e7eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4b5563;
+}
+
+.profileIcon.sm {
+    width: 2rem;
+    height: 2rem;
+}
+
+.profileIcon.md {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.profileIcon.lg {
+    width: 4rem;
+    height: 4rem;
+}
+
+.statusIndicator {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid white;
+    top: 0;
+    right: 0;
+    transform: translate(25%, -25%);
+}
+
+.statusIndicator.sm {
+    width: 0.625rem;
+    height: 0.625rem;
+}
+
+.statusIndicator.md {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+.statusIndicator.lg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.available {
+    background-color: #10b981;
+}
+
+.absent {
+    background-color: #f59e0b;
+}
+
+.disconnected {
+    background-color: #9ca3af;
+}
